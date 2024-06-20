@@ -796,20 +796,20 @@
                           @click="setRecipientAddressToSelf"
                           class="cursor-pointer"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="h-6 w-6 text-white"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                            />
-                          </svg>
+                        <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-6 w-6 text-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+                      />
+                    </svg>
                         </div>
                         <div @click="openScanOverlay" class="cursor-pointer">
                           <svg
@@ -1444,35 +1444,35 @@
 </template>
 
 <script setup lang="ts">
-import { XMarkIcon } from "@heroicons/vue/20/solid";
+import { XMarkIcon } from "@heroicons/vue/20/solid"
 
-import Paseo from "@/assets/img/paseo-logo.svg";
-import Polkadot from "@/assets/img/polkadot-logo.svg";
-import USDC from "@/assets/img/usdc-logo.svg";
+import Paseo from "@/assets/img/paseo-logo.svg"
+import Polkadot from "@/assets/img/polkadot-logo.svg"
+import USDC from "@/assets/img/usdc-logo.svg"
 
-import { useAccount } from "@/store/account.ts";
-import { useIncognitee } from "@/store/incognitee.ts";
+import { useAccount } from "@/store/account.ts"
+import { useIncognitee } from "@/store/incognitee.ts"
 import {
   Dialog,
   DialogPanel,
   DialogTitle,
   TransitionChild,
   TransitionRoot,
-} from "@headlessui/vue";
-import { CheckIcon } from "@heroicons/vue/24/outline";
-import { ApiPromise, WsProvider } from "@polkadot/api";
-import { Keyring } from "@polkadot/keyring";
-import { formatBalance, hexToU8a, u8aToHex } from "@polkadot/util";
+} from "@headlessui/vue"
+import { CheckIcon } from "@heroicons/vue/24/outline"
+import { ApiPromise, WsProvider } from "@polkadot/api"
+import { Keyring } from "@polkadot/keyring"
+import { formatBalance, hexToU8a, u8aToHex } from "@polkadot/util"
 import {
   cryptoWaitReady,
   mnemonicGenerate,
   mnemonicToMiniSecret,
-} from "@polkadot/util-crypto";
-import { useInterval } from "@vueuse/core";
-import { onMounted, ref, watch } from "vue";
-import Qrcode from "vue-qrcode";
-import { QrcodeStream } from "vue-qrcode-reader";
-import { useRouter } from "vue-router";
+} from "@polkadot/util-crypto"
+import { useInterval } from "@vueuse/core"
+import { onMounted, ref, watch } from "vue"
+import Qrcode from "vue-qrcode"
+import { QrcodeStream } from "vue-qrcode-reader"
+import { useRouter } from "vue-router"
 
 const router = useRouter();
 const accountStore = useAccount();
@@ -1483,9 +1483,9 @@ const isFetchingIncogniteeBalance = ref(true);
 const existential_deposit_paseo = 10000000000;
 const txStatus = ref("");
 const recipientAddress = ref("");
-const sendAmount = ref(1.0);
-const shieldAmount = ref(1.0);
-const unshieldAmount = ref(10.0);
+const sendAmount = ref("");
+const shieldAmount = ref("");
+const unshieldAmount = ref("");
 const scanResult = ref("No QR code data yet");
 
 let api: ApiPromise | null = null;
@@ -1534,7 +1534,7 @@ const onDecode = (decodeResult) => {
 
 const txResHandlerPaseo = ({ events = [], status, txHash }) => {
   status.isFinalized
-    ? (txStatus.value = `😀 Finalized. Finalized. You should see your Incognitee balance increase in seconds. Please move to the Private Balance tab`)
+    ? (txStatus.value = `😀 Finalized. You should see your Incognitee balance increase in seconds. Please move to the Private Balance tab`)
     : (txStatus.value = `⌛ Current transaction status: ${status.type}. please be patient a few more seconds. you should see your Paseo balance going down`);
 
   // Loop through Vec<EventRecord> to display all events
@@ -1786,7 +1786,7 @@ const closeFaucetOverlay = () => {
 
 const showUnshieldOverlay = ref(false);
 const openUnshieldOverlay = () => {
-  unshieldAmount.value = 10;
+  unshieldAmount.value = null;
   showUnshieldOverlay.value = true;
 };
 const closeUnshieldOverlay = () => {
@@ -2013,6 +2013,19 @@ hr {
   animation: spin 2s linear infinite;
   vertical-align: middle; /* Align with the text */
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 
 @keyframes spin {
   0% {
