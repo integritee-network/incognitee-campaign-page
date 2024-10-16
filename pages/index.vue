@@ -1,58 +1,56 @@
 <template>
-  <div class="mt-10 incognitee-border-gradient">
-    <div
-      class="flex flex-row justify-between w-full text-center gap-4 container mb-10"
-    >
-      <div class="currency-box p-3 gap-2 basis-1/2" @click="openAssetsInfo">
-        <Polkadot class="w-[30px] h-[30px]" />
-        <p class="text-xs">DOT</p>
-        <span
-          class="inline-flex items-center rounded-lg bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-600"
-          >coming soon</span
-        >
-      </div>
-      <div
-        class="currency-box gap-2 p-3 basis-1/2 border-2 border-incognitee-green"
-      >
+
+
+    <div class="container p-2 incognitee-bg items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+      role="alert">
+      <span class="flex rounded-full incognitee-blue uppercase px-2 py-1 text-xs font-bold mr-3">Live</span>
+      <span class="text-xs mr-2 text-left flex-auto">Join the "Guess the number" Campaign and win some juicy prizes.   Click here. ​</span>
+    </div> 
+
+<div class="mt-5">
+    <div class="flex flex-row justify-between w-full text-center gap-4 container">
+      <a href="#" target="_blank" class="currency-box p-3 gap-2 basis-1/4 hover:border-2 hover:border-incognitee-green">
+    <TEER class="w-[30px] h-[30px]" />
+    <p class="text-xs">TEER<br />Integritee</p>
+  </a>
+      <div class="currency-box gap-2 p-3 basis-1/4 border-2 border-incognitee-green">
         <Paseo class="w-[30px] h-[30px]" />
         <p class="text-xs">PAS<br />PASEO</p>
       </div>
-      <div class="currency-box gap-2 p-3 basis-1/2" @click="openAssetsInfo">
+      <div class="currency-box p-3 gap-2 basis-1/4" @click="openAssetsInfo">
+        <Polkadot class="w-[30px] h-[30px]" />
+        <p class="text-xs">DOT</p>
+        <span
+          class="inline-flex items-center rounded-lg bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-600">coming
+          soon</span>
+      </div>
+      <div class="currency-box gap-2 p-3 basis-1/4" @click="openAssetsInfo">
         <USDC class="w-[30px] h-[30px]" />
         <p class="text-xs">USDC</p>
         <span
-          class="inline-flex items-center rounded-lg bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-600"
-          >coming soon</span
-        >
+          class="inline-flex items-center rounded-lg bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-600">coming
+          soon</span>
       </div>
     </div>
-
+  </div>
     <div class="container">
       <div class="w-full bg-incognitee-blue mt-10">
-        <div
-          class="border bg-incognitee-blue border-incognitee-green rounded-lg p-1"
-        >
+        <div class="border bg-incognitee-blue border-incognitee-green rounded-lg p-1">
           <nav class="flex space-x-4" aria-label="Tabs">
-            <button
-              @click="selectTab('public')"
-              :class="[
-                currentTab === 'public'
-                  ? 'bg-gray-800 text-white'
-                  : 'text-gray-500 hover:text-gray-700',
-                'flex-1 py-2 text-sm font-medium   rounded-lg',
-              ]"
-            >
+            <button @click="selectTab('public')" :class="[
+              currentTab === 'public'
+                ? 'bg-gray-800 text-white'
+                : 'text-gray-500 hover:text-gray-700',
+              'flex-1 py-2 text-sm font-medium   rounded-lg',
+            ]">
               Public Balance
             </button>
-            <button
-              @click="selectTab('private')"
-              :class="[
-                currentTab === 'private'
-                  ? 'bg-gray-800 text-white'
-                  : 'text-gray-500 hover:text-gray-700',
-                'flex-1 py-2 text-sm font-medium rounded-lg',
-              ]"
-            >
+            <button @click="selectTab('private')" :class="[
+              currentTab === 'private'
+                ? 'bg-gray-800 text-white'
+                : 'text-gray-500 hover:text-gray-700',
+              'flex-1 py-2 text-sm font-medium rounded-lg',
+            ]">
               Private Balance
             </button>
           </nav>
@@ -76,46 +74,19 @@
                 </div>
               </div>
               <div class="mt-10">
-                <div
-                  class="inner-box flex justify-around text-white py-2 bg-gray-800 rounded-md"
-                >
-                  <div
-                    class="flex flex-col items-center text-center"
-                    @click="openShieldOverlay"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6 mx-auto mb-2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
-                      />
+                <div class="inner-box flex justify-around text-white py-2 bg-gray-800 rounded-md">
+                  <div class="flex flex-col items-center text-center" @click="openShieldOverlay">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6 mx-auto mb-2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
                     </svg>
                     <p class="text-xs">Shield</p>
                   </div>
-                  <div
-                    class="flex flex-col items-center text-center"
-                    @click="openFaucetOverlay"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6 mx-auto mb-2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
-                      />
+                  <div class="flex flex-col items-center text-center" @click="openFaucetOverlay">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6 mx-auto mb-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                     </svg>
                     <p class="text-xs">Faucet</p>
                   </div>
@@ -138,73 +109,29 @@
                 </div>
               </div>
               <div class="mt-10">
-                <div
-                  class="inner-box flex justify-around text-white py-2 bg-gray-800 rounded-md"
-                >
-                  <div
-                    class="flex flex-col items-center text-center"
-                    @click="openPrivateSendOverlay"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6 mx-auto mb-2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
-                      />
+                <div class="inner-box flex justify-around text-white py-2 bg-gray-800 rounded-md">
+                  <div class="flex flex-col items-center text-center" @click="openPrivateSendOverlay">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6 mx-auto mb-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
                     </svg>
                     <p class="text-xs">Send</p>
                   </div>
 
-                  <div
-                    class="flex flex-col items-center text-center"
-                    @click="openReceiveOverlay"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6 mx-auto mb-2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
-                      />
+                  <div class="flex flex-col items-center text-center" @click="openReceiveOverlay">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6 mx-auto mb-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                     </svg>
                     <p class="text-xs">Receive</p>
                   </div>
 
-                  <div
-                    class="flex flex-col items-center text-center"
-                    @click="openUnshieldOverlay"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6 mx-auto mb-2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                      />
+                  <div class="flex flex-col items-center text-center" @click="openUnshieldOverlay">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6 mx-auto mb-2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                     </svg>
                     <p class="text-xs">Unshield</p>
                   </div>
@@ -229,65 +156,32 @@
 
     <TransitionRoot as="template" :show="showAssetsInfo">
       <Dialog class="relative z-10" @close="closeAssetsInfo">
-        <TransitionChild
-          as="template"
-          enter="ease-out duration-300"
-          enter-from="opacity-0"
-          enter-to="opacity-100"
-          leave="ease-in duration-200"
-          leave-from="opacity-100"
-          leave-to="opacity-0"
-        >
-          <div
-            class="fixed inset-0 bg-black bg-opacity-80 transition-opacity"
-          />
+        <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+          leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+          <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity" />
         </TransitionChild>
 
         <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-          <div
-            class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4"
-          >
-            <TransitionChild
-              as="template"
-              enter="ease-out duration-300"
+          <div class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4">
+            <TransitionChild as="template" enter="ease-out duration-300"
               enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-              enter-to="opacity-100 translate-y-0 sm:scale-100"
-              leave="ease-in duration-200"
+              enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
               leave-from="opacity-100 translate-y-0 sm:scale-100"
-              leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            >
+              leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
               <DialogPanel
-                class="w-full relative transform overflow-hidden rounded-xl bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all flex flex-col sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
-              >
+                class="w-full relative transform overflow-hidden rounded-xl bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all flex flex-col sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
                 <div class="absolute right-0 top-0 pr-4 pt-4">
-                  <button
-                    type="button"
-                    class="text-gray-400 hover:text-gray-500"
-                    @click="closeAssetsInfo"
-                  >
+                  <button type="button" class="text-gray-400 hover:text-gray-500" @click="closeAssetsInfo">
                     <span class="sr-only">Close</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 </div>
                 <div>
                   <div class="mt-3 text-center sm:mt-5">
-                    <DialogTitle
-                      as="h3"
-                      class="text-base font-semibold leading-6 text-white"
-                      >Other Assets
+                    <DialogTitle as="h3" class="text-base font-semibold leading-6 text-white">Other Assets
                     </DialogTitle>
                     <div class="mt-2">
                       <p class="text-sm text-gray-400 mt-4 text-left">
@@ -304,11 +198,9 @@
                   </div>
                 </div>
                 <div class="w-full mt-8 bg-gray-800">
-                  <button
-                    type="button"
+                  <button type="button"
                     class="btn btn_gradient inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm"
-                    @click="closeAssetsInfo"
-                  >
+                    @click="closeAssetsInfo">
                     Got it!
                   </button>
                 </div>
@@ -321,64 +213,31 @@
 
     <TransitionRoot as="template" :show="showPrivacyInfo">
       <Dialog class="relative z-10" @close="closeOnOutsideClick">
-        <TransitionChild
-          as="template"
-          enter="ease-out duration-300"
-          enter-from="opacity-0"
-          enter-to="opacity-100"
-          leave="ease-in duration-200"
-          leave-from="opacity-100"
-          leave-to="opacity-0"
-        >
-          <div
-            class="fixed inset-0 bg-black bg-opacity-80 transition-opacity"
-          />
+        <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+          leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+          <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity" />
         </TransitionChild>
 
         <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-          <div
-            class="flex items-start justify-center p-4 text-center sm:items-center sm:p-0"
-          >
-            <TransitionChild
-              as="template"
-              enter="ease-out duration-300"
+          <div class="flex items-start justify-center p-4 text-center sm:items-center sm:p-0">
+            <TransitionChild as="template" enter="ease-out duration-300"
               enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-              enter-to="opacity-100 translate-y-0 sm:scale-100"
-              leave="ease-in duration-200"
+              enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
               leave-from="opacity-100 translate-y-0 sm:scale-100"
-              leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            >
+              leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
               <DialogPanel
-                class="w-full relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
-              >
+                class="w-full relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
                 <div class="absolute right-0 top-0 pr-4 pt-4">
-                  <button
-                    type="button"
-                    class="text-gray-400 hover:text-gray-500"
-                    @click="closePrivacyInfo"
-                  >
+                  <button type="button" class="text-gray-400 hover:text-gray-500" @click="closePrivacyInfo">
                     <span class="sr-only">Close</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 </div>
                 <div class="mt-3 text-center sm:mt-5">
-                  <DialogTitle
-                    as="h3"
-                    class="text-base font-semibold leading-6 text-white"
-                    >On Privacy
+                  <DialogTitle as="h3" class="text-base font-semibold leading-6 text-white">On Privacy
                   </DialogTitle>
 
                   <div class="mt-2">
@@ -399,8 +258,7 @@
                       behavioral history is revealed as is your balance.
                     </p>
                     <p class="text-sm text-gray-400 text-justify my-4">
-                      <NuxtLink to="https://incognitee.io" class="color_blue"
-                        >Incognitee
+                      <NuxtLink to="https://incognitee.io" class="color_blue">Incognitee
                       </NuxtLink>
                       is a privacy enhancing technology that allows you to
                       shield your assets and transfer them privately. This means
@@ -410,15 +268,12 @@
                       either. This is achieved by using a technology called
                       <NuxtLink
                         to="https://docs.integritee.network/2-integritee-network/2.7-privacy-technology-trusted-execution-environments"
-                        class="color_blue"
-                        >trusted execution environments (TEE)
+                        class="color_blue">trusted execution environments (TEE)
                       </NuxtLink>
                       . The TEEs we use are a hardware feature of server CPU's
                       called <i>Intel SGX</i>. In addition, the
-                      <NuxtLink
-                        to="https://docs.integritee.network/2-integritee-network"
-                        class="color_blue"
-                        >Integritee Network
+                      <NuxtLink to="https://docs.integritee.network/2-integritee-network" class="color_blue">Integritee
+                        Network
                       </NuxtLink>
                       , a Polkadot parachain, performs independent,
                       decentralized remote attestation of TEEs. Moreover, it
@@ -445,11 +300,9 @@
                   </div>
                 </div>
                 <div class="mt-5 sm:mt-6">
-                  <button
-                    type="button"
+                  <button type="button"
                     class="btn btn_gradient inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm"
-                    @click="closePrivacyInfo"
-                  >
+                    @click="closePrivacyInfo">
                     Got it!
                   </button>
                 </div>
@@ -462,63 +315,30 @@
 
     <TransitionRoot as="template" :show="showShieldOverlay">
       <Dialog class="relative z-20" @close="closeShieldOverlay">
-        <TransitionChild
-          as="template"
-          enter="ease-out duration-300"
-          enter-from="opacity-0"
-          enter-to="opacity-100"
-          leave="ease-in duration-200"
-          leave-from="opacity-100"
-          leave-to="opacity-0"
-        >
-          <div
-            class="fixed inset-0 bg-black bg-opacity-80 transition-opacity"
-          />
+        <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+          leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+          <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity" />
         </TransitionChild>
 
-        <div
-          class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4"
-        >
-          <TransitionChild
-            as="template"
-            enter="ease-out duration-300"
+        <div class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4">
+          <TransitionChild as="template" enter="ease-out duration-300"
             enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enter-to="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
+            enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
             leave-from="opacity-100 translate-y-0 sm:scale-100"
-            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          >
+            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
             <DialogPanel
-              class="w-full relative transform overflow-hidden rounded-xl bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all flex flex-col sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
-            >
+              class="w-full relative transform overflow-hidden rounded-xl bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all flex flex-col sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
               <div class="absolute right-0 top-0 pr-4 pt-4">
-                <button
-                  type="button"
-                  class="text-gray-400 hover:text-gray-500"
-                  @click="closeShieldOverlay"
-                >
+                <button type="button" class="text-gray-400 hover:text-gray-500" @click="closeShieldOverlay">
                   <span class="sr-only">Close</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
               <div class="mt-3 text-center sm:mt-5 flex-grow">
-                <DialogTitle
-                  as="h3"
-                  class="text-base font-semibold leading-6 text-white"
-                  >Shield PAS
+                <DialogTitle as="h3" class="text-base font-semibold leading-6 text-white">Shield PAS
                 </DialogTitle>
 
                 <p class="text-sm text-gray-400 text-left my-4">
@@ -526,51 +346,29 @@
                   balance on Paseo to your private wallet on Incognitee.
                 </p>
 
-                <form
-                  @submit.prevent="submitShieldForm"
-                  class="flex-grow flex flex-col justify-between"
-                >
+                <form @submit.prevent="submitShieldForm" class="flex-grow flex flex-col justify-between">
                   <div>
                     <div class="flex justify-between items-center mt-4">
-                      <label
-                        for="sendAmount"
-                        class="text-sm font-medium leading-6 text-white"
-                        >PAS Amount</label
-                      >
+                      <label for="sendAmount" class="text-sm font-medium leading-6 text-white">PAS Amount</label>
 
-                      <span class="text-xs text-gray-400"
-                        >Available public balance:
-                        {{ accountStore.getPaseoHumanBalance }}</span
-                      >
+                      <span class="text-xs text-gray-400">Available public balance:
+                        {{ accountStore.getPaseoHumanBalance }}</span>
                     </div>
-                    <input
-                      id="shieldAmount"
-                      v-model="shieldAmount"
-                      type="number"
-                      step="0.01"
-                      :min="0.1"
-                      :max="
-                        (accountStore.paseoBalance -
-                          existential_deposit_paseo) /
-                          Math.pow(10, 10) -
-                        0.1
-                      "
-                      required
+                    <input id="shieldAmount" v-model="shieldAmount" type="number" step="0.01" :min="0.1" :max="(accountStore.paseoBalance -
+                        existential_deposit_paseo) /
+                      Math.pow(10, 10) -
+                      0.1
+                      " required
                       class="w-full text-sm rounded-lg flex-grow py-2 bg-cool-900 text-white placeholder-gray-500 border border-green-500 text-right"
-                      style="border-color: #24ad7c"
-                    />
+                      style="border-color: #24ad7c" />
                     <div class="text-right">
-                      <span class="text-xs text-gray-400"
-                        >Fee: 16 mPAS for Paseo, 0.175% for Incognitee</span
-                      >
+                      <span class="text-xs text-gray-400">Fee: 16 mPAS for Paseo, 0.175% for Incognitee</span>
                     </div>
                   </div>
                   <div class="bottom-0 left-0 w-full mt-8 bg-gray-800">
-                    <button
-                      type="submit"
+                    <button type="submit"
                       class="btn btn_gradient inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm"
-                      @click="submitShieldForm"
-                    >
+                      @click="submitShieldForm">
                       Shield
                     </button>
                   </div>
@@ -584,64 +382,31 @@
 
     <TransitionRoot as="template" :show="showFaucetOverlay">
       <Dialog class="relative z-20" @close="closeFaucetOverlay">
-        <TransitionChild
-          as="template"
-          enter="ease-out duration-300"
-          enter-from="opacity-0"
-          enter-to="opacity-100"
-          leave="ease-in duration-200"
-          leave-from="opacity-100"
-          leave-to="opacity-0"
-        >
-          <div
-            class="fixed inset-0 bg-black bg-opacity-80 transition-opacity"
-          />
+        <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+          leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+          <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity" />
         </TransitionChild>
 
-        <div
-          class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4"
-        >
-          <TransitionChild
-            as="template"
-            enter="ease-out duration-300"
+        <div class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4">
+          <TransitionChild as="template" enter="ease-out duration-300"
             enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enter-to="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
+            enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
             leave-from="opacity-100 translate-y-0 sm:scale-100"
-            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          >
+            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
             <DialogPanel
-              class="w-full relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all flex flex-col sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
-            >
+              class="w-full relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all flex flex-col sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
               <div class="absolute right-0 top-0 pr-4 pt-4">
-                <button
-                  type="button"
-                  class="text-gray-400 hover:text-gray-500"
-                  @click="closeFaucetOverlay"
-                >
+                <button type="button" class="text-gray-400 hover:text-gray-500" @click="closeFaucetOverlay">
                   <span class="sr-only">Close</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
               <div class="flex-grow">
                 <div class="mt-3 text-center sm:mt-5">
-                  <DialogTitle
-                    as="h3"
-                    class="text-base font-semibold leading-6 text-white"
-                    >Drip Faucet
+                  <DialogTitle as="h3" class="text-base font-semibold leading-6 text-white">Drip Faucet
                   </DialogTitle>
                   <div class="mt-2">
                     <p class="text-sm text-gray-400">
@@ -652,32 +417,15 @@
 
                     <div class="flex flex-col mt-5">
                       <div class="relative flex items-center rounded-lg">
-                        <input
-                          id="accountAddress"
-                          type="text"
-                          :value="accountStore.getAddress"
-                          readonly
+                        <input id="accountAddress" type="text" :value="accountStore.getAddress" readonly
                           class="w-full text-sm rounded-lg flex-grow pr-14 py-2 bg-cool-900 text-white placeholder-gray-500 border border-green-500 truncate-input"
-                          style="border-color: #24ad7c"
-                        />
+                          style="border-color: #24ad7c" />
                         <div class="absolute right-3 flex space-x-2">
-                          <div
-                            @click="copyOwnAddressToClipboard"
-                            class="cursor-pointer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="size-6"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184"
-                              />
+                          <div @click="copyOwnAddressToClipboard" class="cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
                             </svg>
                           </div>
                         </div>
@@ -688,10 +436,8 @@
               </div>
               <div class="mt-5 sm:mt-6">
                 <a href="https://faucet.polkadot.io/" target="_blank">
-                  <button
-                    type="button"
-                    class="btn btn_gradient inline-flex w-full justify-center rounded-md px-3 py-3 mt-8 text-sm font-semibold text-white shadow-sm"
-                  >
+                  <button type="button"
+                    class="btn btn_gradient inline-flex w-full justify-center rounded-md px-3 py-3 mt-8 text-sm font-semibold text-white shadow-sm">
                     Get free PAS tokens from faucet
                   </button>
                 </a>
@@ -702,68 +448,32 @@
       </Dialog>
     </TransitionRoot>
 
-    <TransitionRoot
-      as="template"
-      :show="showUnshieldOverlay && !showScanOverlay"
-    >
+    <TransitionRoot as="template" :show="showUnshieldOverlay && !showScanOverlay">
       <Dialog class="relative z-10" @close="closeUnshieldOverlay">
-        <TransitionChild
-          as="template"
-          enter="ease-out duration-300"
-          enter-from="opacity-0"
-          enter-to="opacity-100"
-          leave="ease-in duration-200"
-          leave-from="opacity-100"
-          leave-to="opacity-0"
-        >
-          <div
-            class="fixed inset-0 bg-black bg-opacity-80 transition-opacity"
-          />
+        <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+          leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+          <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity" />
         </TransitionChild>
 
-        <div
-          class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4"
-        >
-          <TransitionChild
-            as="template"
-            enter="ease-out duration-300"
+        <div class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4">
+          <TransitionChild as="template" enter="ease-out duration-300"
             enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enter-to="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
+            enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
             leave-from="opacity-100 translate-y-0 sm:scale-100"
-            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          >
+            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
             <DialogPanel
-              class="relative w-full max-w-sm mx-auto bg-gray-800 rounded-lg shadow-xl flex flex-col px-4 pb-4 pt-5 text-left transition-all sm:my-8 sm:max-w-sm sm:p-6"
-            >
+              class="relative w-full max-w-sm mx-auto bg-gray-800 rounded-lg shadow-xl flex flex-col px-4 pb-4 pt-5 text-left transition-all sm:my-8 sm:max-w-sm sm:p-6">
               <div class="absolute right-0 top-0 pr-4 pt-4">
-                <button
-                  type="button"
-                  class="text-gray-400 hover:text-gray-500"
-                  @click="closeUnshieldOverlay"
-                >
+                <button type="button" class="text-gray-400 hover:text-gray-500" @click="closeUnshieldOverlay">
                   <span class="sr-only">Close</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
               <div class="mt-3 text-center sm:mt-5">
-                <DialogTitle
-                  as="h3"
-                  class="text-base font-semibold leading-6 text-white"
-                  >Unshield PAS
+                <DialogTitle as="h3" class="text-base font-semibold leading-6 text-white">Unshield PAS
                 </DialogTitle>
                 <div class="mt-5">
                   <p class="text-sm text-gray-400 text-left my-4">
@@ -773,77 +483,36 @@
                 </div>
                 <form class="mt-5" @submit.prevent="submitUnshieldForm">
                   <div class="flex flex-col">
-                    <label
-                      for="recipientAddress"
-                      class="text-sm font-medium leading-6 text-white text-left"
-                      >Recipient</label
-                    >
+                    <label for="recipientAddress"
+                      class="text-sm font-medium leading-6 text-white text-left">Recipient</label>
                     <div class="relative flex items-center rounded-lg">
                       <div class="absolute left-3 flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="h-6 w-6 text-white"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                          stroke="currentColor" class="h-6 w-6 text-white">
+                          <path stroke-linecap="round" stroke-linejoin="round"
                             d="M11.9889 0L0.0222883 5.99115L0 18.0089L12.0111 24L23.9778 18.0089L24 5.99115L11.9889 0ZM11.9055 2.93685L15.012 4.49375V7.60754L11.9055 9.16444L8.79902 7.60754V4.49375L11.9055 2.93685ZM5.66099 6.0491L8.76754 7.606V10.7198L5.66099 12.2767L8.76749 13.8336V16.9489L5.66093 18.5058L2.55438 16.9489V13.8336L5.66087 12.2767L2.55438 10.7198V7.606L5.66087 6.0491H5.66099ZM18.1278 6.0491L21.2343 7.606V10.7198L18.1279 12.2767L21.2344 13.8336V16.9489L18.1279 18.5058L15.0214 16.9489V13.8336L18.1279 12.2767L15.0214 10.7198V7.606L18.1278 6.0491ZM11.9055 9.16928L15.012 10.7262V13.84L11.913 15.3937L15.012 16.9457V20.0611L11.9055 21.618L8.79902 20.0611V16.9457L11.898 15.3937L8.79902 13.84V10.7262L11.9055 9.16928H11.9055Z"
-                            fill="white"
-                          />
+                            fill="white" />
                         </svg>
                       </div>
-                      <input
-                        id="recipientAddress"
-                        v-model="recipientAddress"
-                        type="text"
-                        required
+                      <input id="recipientAddress" v-model="recipientAddress" type="text" required
                         placeholder="Recipient"
                         class="w-full text-sm rounded-lg flex-grow pl-12 py-2 pr-20 bg-cool-900 text-white placeholder-gray-500 border border-green-500 truncate-input"
-                        style="border-color: #24ad7c"
-                      />
+                        style="border-color: #24ad7c" />
                       <div class="absolute right-3 flex space-x-2">
-                        <div
-                          @click="setRecipientAddressToSelf"
-                          class="cursor-pointer"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="h-6 w-6 text-white"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                            />
+                        <div @click="setRecipientAddressToSelf" class="cursor-pointer">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                           </svg>
                         </div>
                         <div @click="openScanOverlay" class="cursor-pointer">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="h-6 w-6 text-white"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 3.75 9.375v-4.5ZM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 0 1-1.125-1.125v-4.5ZM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 13.5 9.375v-4.5Z"
-                            />
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M6.75 6.75h.75v.75h-.75v-.75ZM6.75 16.5h.75v.75h-.75v-.75ZM16.5 6.75h.75v.75h-.75v-.75ZM13.5 13.5h.75v.75h-.75v-.75ZM13.5 19.5h.75v.75h-.75v-.75ZM19.5 13.5h.75v.75h-.75v-.75ZM19.5 19.5h.75v.75h-.75v-.75ZM16.5 16.5h.75v.75h-.75v-.75Z"
-                            />
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 3.75 9.375v-4.5ZM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 0 1-1.125-1.125v-4.5ZM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 13.5 9.375v-4.5Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M6.75 6.75h.75v.75h-.75v-.75ZM6.75 16.5h.75v.75h-.75v-.75ZM16.5 6.75h.75v.75h-.75v-.75ZM13.5 13.5h.75v.75h-.75v-.75ZM13.5 19.5h.75v.75h-.75v-.75ZM19.5 13.5h.75v.75h-.75v-.75ZM19.5 19.5h.75v.75h-.75v-.75ZM16.5 16.5h.75v.75h-.75v-.75Z" />
                           </svg>
                         </div>
                       </div>
@@ -858,42 +527,23 @@
                   </p>
 
                   <div class="flex justify-between items-center mt-5">
-                    <label
-                      for="unshieldAmount"
-                      class="text-sm font-medium leading-6 text-white"
-                      >PAS Amount</label
-                    >
+                    <label for="unshieldAmount" class="text-sm font-medium leading-6 text-white">PAS Amount</label>
 
-                    <span class="text-xs text-gray-400"
-                      >Available private balance:
-                      {{ accountStore.getIncogniteeHumanBalance }}</span
-                    >
+                    <span class="text-xs text-gray-400">Available private balance:
+                      {{ accountStore.getIncogniteeHumanBalance }}</span>
                   </div>
-                  <input
-                    id="unshieldAmount"
-                    v-model="unshieldAmount"
-                    type="number"
-                    step="0.1"
-                    :min="1.1"
-                    :max="
-                      accountStore.incogniteeBalance / Math.pow(10, 10) - 0.1
-                    "
-                    required
+                  <input id="unshieldAmount" v-model="unshieldAmount" type="number" step="0.1" :min="1.1" :max="accountStore.incogniteeBalance / Math.pow(10, 10) - 0.1
+                    " required
                     class="w-full text-sm rounded-lg flex-grow py-2 bg-cool-900 text-white placeholder-gray-500 border border-green-500 text-right"
-                    style="border-color: #24ad7c"
-                  />
+                    style="border-color: #24ad7c" />
                   <!-- Fee description -->
                   <div class="text-right">
-                    <span class="text-xs text-gray-400"
-                      >Fee: 30m PAS for Incognitee</span
-                    >
+                    <span class="text-xs text-gray-400">Fee: 30m PAS for Incognitee</span>
                   </div>
 
                   <div class="mt-8 w-full bg-gray-800">
-                    <button
-                      type="submit"
-                      class="btn btn_gradient inline-flex w-full justify-center rounded-md text-sm font-semibold text-white shadow-sm"
-                    >
+                    <button type="submit"
+                      class="btn btn_gradient inline-flex w-full justify-center rounded-md text-sm font-semibold text-white shadow-sm">
                       Unshield
                     </button>
                   </div>
@@ -906,69 +556,33 @@
     </TransitionRoot>
 
     <TransitionRoot as="template" :show="showReceiveOverlay">
-      <Dialog
-        class="fixed inset-0 z-20 flex items-center justify-center"
-        @close="closeReceiveOverlay"
-      >
-        <TransitionChild
-          as="template"
-          enter="ease-out duration-300"
-          enter-from="opacity-0"
-          enter-to="opacity-100"
-          leave="ease-in duration-200"
-          leave-from="opacity-100"
-          leave-to="opacity-0"
-        >
-          <div
-            class="fixed inset-0 bg-black bg-opacity-80 transition-opacity"
-          />
+      <Dialog class="fixed inset-0 z-20 flex items-center justify-center" @close="closeReceiveOverlay">
+        <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+          leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+          <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity" />
         </TransitionChild>
 
-        <div
-          class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4"
-        >
-          <TransitionChild
-            as="template"
-            enter="ease-out duration-300"
+        <div class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4">
+          <TransitionChild as="template" enter="ease-out duration-300"
             enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enter-to="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
+            enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
             leave-from="opacity-100 translate-y-0 sm:scale-100"
-            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          >
+            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
             <DialogPanel
-              class="w-full relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all flex flex-col sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
-            >
+              class="w-full relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all flex flex-col sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
               <div class="absolute right-0 top-0 pr-4 pt-4">
-                <button
-                  type="button"
-                  class="text-gray-400 hover:text-gray-500"
-                  @click="closeReceiveOverlay"
-                >
+                <button type="button" class="text-gray-400 hover:text-gray-500" @click="closeReceiveOverlay">
                   <span class="sr-only">Close</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
               <div class="flex-grow flex flex-col justify-start">
                 <!-- Anpassung hier -->
                 <div class="mt-3 text-center sm:mt-5">
-                  <DialogTitle
-                    as="h3"
-                    class="text-base font-semibold leading-6 text-white"
-                  >
+                  <DialogTitle as="h3" class="text-base font-semibold leading-6 text-white">
                     Receive
                   </DialogTitle>
                   <div class="mt-5">
@@ -982,38 +596,19 @@
                   </div>
 
                   <div class="flex flex-col mt-5">
-                    <div
-                      class="w-full mt-5 mb-2 text-sm font-medium leading-6 text-white font-semibold"
-                    >
+                    <div class="w-full mt-5 mb-2 text-sm font-medium leading-6 text-white font-semibold">
                       Your address:
                     </div>
                     <div class="relative flex items-center rounded-lg">
-                      <input
-                        id="accountAddress"
-                        type="text"
-                        :value="accountStore.getAddress"
-                        readonly
+                      <input id="accountAddress" type="text" :value="accountStore.getAddress" readonly
                         class="w-full text-sm rounded-lg flex-grow pr-14 py-2 bg-cool-900 text-white placeholder-gray-500 border border-green-500 truncate-input"
-                        style="border-color: #24ad7c"
-                      />
+                        style="border-color: #24ad7c" />
                       <div class="absolute right-3 flex space-x-2">
-                        <div
-                          @click="copyOwnAddressToClipboard"
-                          class="cursor-pointer"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-6"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184"
-                            />
+                        <div @click="copyOwnAddressToClipboard" class="cursor-pointer">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
                           </svg>
                         </div>
                       </div>
@@ -1027,69 +622,33 @@
       </Dialog>
     </TransitionRoot>
 
-    <TransitionRoot
-      as="template"
-      :show="showPrivateSendOverlay && !showScanOverlay"
-    >
+    <TransitionRoot as="template" :show="showPrivateSendOverlay && !showScanOverlay">
       <Dialog class="relative z-20" @close="closePrivateSendOverlay">
-        <TransitionChild
-          as="template"
-          enter="ease-out duration-300"
-          enter-from="opacity-0"
-          enter-to="opacity-100"
-          leave="ease-in duration-200"
-          leave-from="opacity-100"
-          leave-to="opacity-0"
-        >
-          <div
-            class="fixed inset-0 bg-black bg-opacity-80 transition-opacity"
-          />
+        <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+          leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+          <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity" />
         </TransitionChild>
 
-        <div
-          class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4"
-        >
-          <TransitionChild
-            as="template"
-            enter="ease-out duration-300"
+        <div class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4">
+          <TransitionChild as="template" enter="ease-out duration-300"
             enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enter-to="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
+            enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
             leave-from="opacity-100 translate-y-0 sm:scale-100"
-            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          >
+            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
             <DialogPanel
-              class="w-full relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all flex flex-col sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
-            >
+              class="w-full relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all flex flex-col sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
               <div class="absolute right-0 top-0 pr-4 pt-4">
-                <button
-                  type="button"
-                  class="text-gray-400 hover:text-gray-500"
-                  @click="closePrivateSendOverlay"
-                >
+                <button type="button" class="text-gray-400 hover:text-gray-500" @click="closePrivateSendOverlay">
                   <span class="sr-only">Close</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
               <div class="flex-grow">
                 <div class="mt-3 text-center sm:mt-5">
-                  <DialogTitle
-                    as="h3"
-                    class="text-base font-semibold leading-6 text-white"
-                    >Send Privately
+                  <DialogTitle as="h3" class="text-base font-semibold leading-6 text-white">Send Privately
                   </DialogTitle>
                   <div class="mt-5">
                     <p class="text-sm text-gray-400 text-left my-4">
@@ -1099,41 +658,20 @@
                   </div>
                   <form class="mt-5" @submit.prevent="submitSendForm">
                     <div class="flex flex-col">
-                      <label
-                        for="recipientAddress"
-                        class="text-sm font-medium leading-6 text-white text-left"
-                        >Recipient</label
-                      >
+                      <label for="recipientAddress"
+                        class="text-sm font-medium leading-6 text-white text-left">Recipient</label>
                       <div class="relative flex items-center rounded-lg">
-                        <input
-                          id="recipientAddress"
-                          v-model="recipientAddress"
-                          type="text"
-                          required
+                        <input id="recipientAddress" v-model="recipientAddress" type="text" required
                           class="w-full text-sm rounded-lg flex-grow py-2 bg-cool-900 text-white placeholder-gray-500 border border-green-500 truncate-input pr-12"
-                          style="border-color: #24ad7c"
-                          placeholder="Recipient"
-                        />
+                          style="border-color: #24ad7c" placeholder="Recipient" />
                         <div class="absolute right-3 flex space-x-2">
                           <div @click="openScanOverlay" class="cursor-pointer">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="h-6 w-6 text-white"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 3.75 9.375v-4.5ZM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 0 1-1.125-1.125v-4.5ZM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 13.5 9.375v-4.5Z"
-                              />
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M6.75 6.75h.75v.75h-.75v-.75ZM6.75 16.5h.75v.75h-.75v-.75ZM16.5 6.75h.75v.75h-.75v-.75ZM13.5 13.5h.75v.75h-.75v-.75ZM13.5 19.5h.75v.75h-.75v-.75ZM19.5 13.5h.75v.75h-.75v-.75ZM19.5 19.5h.75v.75h-.75v-.75ZM16.5 16.5h.75v.75h-.75v-.75Z"
-                              />
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="h-6 w-6 text-white">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 3.75 9.375v-4.5ZM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 0 1-1.125-1.125v-4.5ZM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 13.5 9.375v-4.5Z" />
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6.75 6.75h.75v.75h-.75v-.75ZM6.75 16.5h.75v.75h-.75v-.75ZM16.5 6.75h.75v.75h-.75v-.75ZM13.5 13.5h.75v.75h-.75v-.75ZM13.5 19.5h.75v.75h-.75v-.75ZM19.5 13.5h.75v.75h-.75v-.75ZM19.5 19.5h.75v.75h-.75v-.75ZM16.5 16.5h.75v.75h-.75v-.75Z" />
                             </svg>
                           </div>
                         </div>
@@ -1142,50 +680,30 @@
                     <div class="mt-10">
                       <!-- Label and available balance -->
                       <div class="flex justify-between items-center">
-                        <label
-                          for="sendAmount"
-                          class="text-sm font-medium leading-6 text-white"
-                          >PAS Amount</label
-                        >
+                        <label for="sendAmount" class="text-sm font-medium leading-6 text-white">PAS Amount</label>
 
-                        <span class="text-xs text-gray-400"
-                          >Available private balance:
-                          {{ accountStore.getIncogniteeHumanBalance }}</span
-                        >
+                        <span class="text-xs text-gray-400">Available private balance:
+                          {{ accountStore.getIncogniteeHumanBalance }}</span>
                       </div>
 
                       <!-- Input field -->
                       <div>
-                        <input
-                          id="sendAmount"
-                          v-model="sendAmount"
-                          type="number"
-                          step="0.01"
-                          :min="0.1"
-                          :max="
-                            accountStore.incogniteeBalance / Math.pow(10, 10) -
-                            0.1
-                          "
-                          required
+                        <input id="sendAmount" v-model="sendAmount" type="number" step="0.01" :min="0.1" :max="accountStore.incogniteeBalance / Math.pow(10, 10) -
+                          0.1
+                          " required
                           class="w-full text-sm rounded-lg flex-grow py-2 bg-cool-900 text-white placeholder-gray-500 border border-green-500 text-right"
-                          style="border-color: #24ad7c"
-                          placeholder="Amount"
-                        />
+                          style="border-color: #24ad7c" placeholder="Amount" />
                       </div>
 
                       <!-- Fee description -->
                       <div class="text-right">
-                        <span class="text-xs text-gray-400"
-                          >Fee: 10m PAS for Incognitee</span
-                        >
+                        <span class="text-xs text-gray-400">Fee: 10m PAS for Incognitee</span>
                       </div>
                     </div>
 
                     <div class="mt-8 bottom-0 left-0 w-full bg-gray-800">
-                      <button
-                        type="submit"
-                        class="btn btn_gradient inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm"
-                      >
+                      <button type="submit"
+                        class="btn btn_gradient inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm">
                         Transfer
                       </button>
                     </div>
@@ -1352,63 +870,30 @@
 
     <TransitionRoot as="template" :show="showScanOverlay">
       <Dialog class="relative z-20" @close="closeScanOverlay">
-        <TransitionChild
-          as="template"
-          enter="ease-out duration-300"
-          enter-from="opacity-0"
-          enter-to="opacity-100"
-          leave="ease-in duration-200"
-          leave-from="opacity-100"
-          leave-to="opacity-0"
-        >
-          <div
-            class="fixed inset-0 bg-black bg-opacity-80 transition-opacity"
-          />
+        <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+          leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+          <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity" />
         </TransitionChild>
 
-        <div
-          class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4"
-        >
-          <TransitionChild
-            as="template"
-            enter="ease-out duration-300"
+        <div class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4">
+          <TransitionChild as="template" enter="ease-out duration-300"
             enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enter-to="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
+            enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
             leave-from="opacity-100 translate-y-0 sm:scale-100"
-            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          >
+            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
             <DialogPanel
-              class="w-full relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
-            >
+              class="w-full relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
               <div class="absolute right-0 top-0 pr-4 pt-4">
-                <button
-                  type="button"
-                  class="text-gray-400 hover:text-gray-500"
-                  @click="closeScanOverlay"
-                >
+                <button type="button" class="text-gray-400 hover:text-gray-500" @click="closeScanOverlay">
                   <span class="sr-only">Close</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
               <div class="mt-3 text-center sm:mt-5">
-                <DialogTitle
-                  as="h3"
-                  class="text-base font-semibold leading-6 text-white"
-                  >Scan recipient's QR code
+                <DialogTitle as="h3" class="text-base font-semibold leading-6 text-white">Scan recipient's QR code
                 </DialogTitle>
 
                 <div class="mt-6 qrcode-container">
@@ -1423,73 +908,35 @@
 
     <TransitionRoot as="template" :show="showNewWalletOverlay">
       <Dialog class="relative z-10" @close="closeNewWalletOverlay">
-        <TransitionChild
-          as="template"
-          enter="ease-out duration-300"
-          enter-from="opacity-0"
-          enter-to="opacity-100"
-          leave="ease-in duration-200"
-          leave-from="opacity-100"
-          leave-to="opacity-0"
-        >
-          <div
-            class="fixed inset-0 bg-black bg-opacity-80 transition-opacity"
-          />
+        <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+          leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+          <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity" />
         </TransitionChild>
 
-        <div
-          class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4"
-        >
-          <TransitionChild
-            as="template"
-            enter="ease-out duration-300"
+        <div class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4">
+          <TransitionChild as="template" enter="ease-out duration-300"
             enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enter-to="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
+            enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
             leave-from="opacity-100 translate-y-0 sm:scale-100"
-            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          >
+            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
             <DialogPanel
-              class="relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
-            >
+              class="relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
               <div class="absolute right-0 top-0 pr-4 pt-4">
-                <button
-                  type="button"
-                  class="text-gray-400 hover:text-gray-500"
-                  @click="closeNewWalletOverlay"
-                >
+                <button type="button" class="text-gray-400 hover:text-gray-500" @click="closeNewWalletOverlay">
                   <span class="sr-only">Close</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
               <div>
-                <div
-                  class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100"
-                >
-                  <CheckIcon
-                    class="h-6 w-6 text-green-600"
-                    aria-hidden="true"
-                  />
+                <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
+                  <CheckIcon class="h-6 w-6 text-green-600" aria-hidden="true" />
                 </div>
 
                 <div class="mt-3 text-center sm:mt-5">
-                  <DialogTitle
-                    as="h3"
-                    class="text-base font-semibold leading-6 text-white"
-                    >New Wallet!
+                  <DialogTitle as="h3" class="text-base font-semibold leading-6 text-white">New Wallet!
                   </DialogTitle>
                   <div class="mt-2">
                     <p class="text-sm text-gray-400">
@@ -1498,32 +945,15 @@
 
                     <div class="flex flex-col mt-5">
                       <div class="relative flex items-center rounded-lg">
-                        <input
-                          id="accountAddress"
-                          type="text"
-                          :value="accountStore.getAddress"
-                          readonly
+                        <input id="accountAddress" type="text" :value="accountStore.getAddress" readonly
                           class="w-full text-sm rounded-lg flex-grow pr-14 py-2 bg-cool-900 text-white placeholder-gray-500 border border-green-500 truncate-input"
-                          style="border-color: #24ad7c"
-                        />
+                          style="border-color: #24ad7c" />
                         <div class="absolute right-3 flex space-x-2">
-                          <div
-                            @click="copyOwnAddressToClipboard"
-                            class="cursor-pointer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="size-6"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184"
-                              />
+                          <div @click="copyOwnAddressToClipboard" class="cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
                             </svg>
                           </div>
                         </div>
@@ -1531,10 +961,8 @@
                     </div>
                     <div class="mt-5">
                       <a href="https://faucet.polkadot.io/" target="_blank">
-                        <button
-                          type="button"
-                          class="btn btn_gradient inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm"
-                        >
+                        <button type="button"
+                          class="btn btn_gradient inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm">
                           Get free PAS tokens from faucet
                         </button>
                       </a>
@@ -1564,149 +992,78 @@
 
     <TransitionRoot as="template" :show="showChooseWalletOverlay">
       <Dialog class="relative z-10" @close="closeChooseWalletOverlay">
-        <TransitionChild
-          as="template"
-          enter="ease-out duration-300"
-          enter-from="opacity-0"
-          enter-to="opacity-100"
-          leave="ease-in duration-200"
-          leave-from="opacity-100"
-          leave-to="opacity-0"
-        >
-          <div
-            class="fixed inset-0 bg-black bg-opacity-80 transition-opacity"
-          />
+        <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+          leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+          <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity" />
         </TransitionChild>
 
-        <div
-          class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4"
-        >
-          <TransitionChild
-            as="template"
-            enter="ease-out duration-300"
+        <div class="fixed inset-0 z-10 w-screen flex items-center justify-center p-4">
+          <TransitionChild as="template" enter="ease-out duration-300"
             enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enter-to="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
+            enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
             leave-from="opacity-100 translate-y-0 sm:scale-100"
-            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          >
+            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
             <DialogPanel
-              class="relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
-            >
+              class="relative transform overflow-hidden rounded-lg bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
               <div class="absolute right-0 top-0 pr-4 pt-4">
-                <button
-                  type="button"
-                  class="text-gray-400 hover:text-gray-500"
-                  @click="closeChooseWalletOverlay"
-                >
+                <button type="button" class="text-gray-400 hover:text-gray-500" @click="closeChooseWalletOverlay">
                   <span class="sr-only">Close</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
               <div>
-                <div
-                  class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100"
-                >
-                  <CheckIcon
-                    class="h-6 w-6 text-green-600"
-                    aria-hidden="true"
-                  />
+                <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
+                  <CheckIcon class="h-6 w-6 text-green-600" aria-hidden="true" />
                 </div>
 
                 <div class="mt-3 text-center sm:mt-5">
-                  <DialogTitle
-                    as="h3"
-                    class="text-base font-semibold leading-6 text-white"
-                    >Access Your Wallet!
+                  <DialogTitle as="h3" class="text-base font-semibold leading-6 text-white">Access Your Wallet!
                   </DialogTitle>
                   <div class="mt-2">
                     <p class="text-sm text-gray-400">
                       How would you like to connect?
                     </p>
                     <div class="mt-4">
-                      <button
-                        @click="createTestingAccount"
-                        class="incognitee-bg btn btn_gradient rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                      >
+                      <button @click="createTestingAccount"
+                        class="incognitee-bg btn btn_gradient rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                         Create a New Account for Testing
                       </button>
                     </div>
                     <p class="mt-4">or</p>
-                    <div
-                      v-if="extensionAccounts.length < 1"
-                      class="mt-4 flex flex-col"
-                    >
+                    <div v-if="extensionAccounts.length < 1" class="mt-4 flex flex-col">
                       <div
-                        class="mx-auto grid max-w-lg grid-cols-2 gap-x-3 gap-y-3 sm:max-w-xl sm:grid-cols-4 sm:gap-x-3 lg:mx-0 lg:max-w-none lg:grid-cols-4"
-                      >
-                        <a href="https://talisman.xyz/download"
-                          ><img
+                        class="mx-auto grid max-w-lg grid-cols-2 gap-x-3 gap-y-3 sm:max-w-xl sm:grid-cols-4 sm:gap-x-3 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+                        <a href="https://talisman.xyz/download"><img
                             class="col-span-1 max-h-10 w-full object-contain lg:col-span-1"
-                            src="/img/index/talisman-logo.svg"
-                            alt="talisman"
-                        /></a>
-                        <a href="https://novawallet.io/"
-                          ><img
+                            src="/img/index/talisman-logo.svg" alt="talisman" /></a>
+                        <a href="https://novawallet.io/"><img
                             class="col-span-1 max-h-7 w-full object-contain lg:col-span-1"
-                            src="/img/index/nova-wallet-logo.svg"
-                            alt="nova wallet"
-                        /></a>
-                        <a href="https://www.subwallet.app/"
-                          ><img
+                            src="/img/index/nova-wallet-logo.svg" alt="nova wallet" /></a>
+                        <a href="https://www.subwallet.app/"><img
                             class="col-span-1 max-h-10 w-full object-contain lg:col-span-1"
-                            src="/img/index/sub-wallet-logo.svg"
-                            alt="sub wallet"
-                        /></a>
-                        <a href="https://polkadot.js.org/extension/"
-                          ><img
+                            src="/img/index/sub-wallet-logo.svg" alt="sub wallet" /></a>
+                        <a href="https://polkadot.js.org/extension/"><img
                             class="col-span-1 max-h-7 w-full object-contain lg:col-span-1"
-                            src="/img/index/polkadotjs-logo.svg"
-                            alt="polkajs"
-                        /></a>
+                            src="/img/index/polkadotjs-logo.svg" alt="polkajs" /></a>
                       </div>
                       <div class="mt-10">
-                        <button
-                          @click="connectExtension"
-                          class="incognitee-bg btn btn_gradient rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                        >
+                        <button @click="connectExtension"
+                          class="incognitee-bg btn btn_gradient rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                           Connect Signer Extension
                         </button>
                       </div>
                     </div>
-                    <div
-                      v-if="extensionAccounts.length > 0"
-                      ref="walletSection"
-                      id="wallet"
-                      class="py-12 sm:py-16"
-                    >
+                    <div v-if="extensionAccounts.length > 0" ref="walletSection" id="wallet" class="py-12 sm:py-16">
                       <p class="text-sm text-gray-400">
                         Choose one of your extension accounts
                       </p>
-                      <select
-                        v-model="selectedExtensionAccount"
-                        id="account.address"
-                        name="account.address"
+                      <select v-model="selectedExtensionAccount" id="account.address" name="account.address"
                         placeholder="account.address"
-                        class="w-full rounded-md border-0 bg-gray-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-700 focus:ring-1 focus:ring-inset focus:ring-incognitee-green sm:text-sm sm:leading-6"
-                      >
-                        <option
-                          v-for="account in extensionAccounts"
-                          :key="account.address"
-                          :value="account.address"
-                        >
+                        class="w-full rounded-md border-0 bg-gray-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-700 focus:ring-1 focus:ring-inset focus:ring-incognitee-green sm:text-sm sm:leading-6">
+                        <option v-for="account in extensionAccounts" :key="account.address" :value="account.address">
                           {{ account.meta.name }}
                         </option>
                       </select>
@@ -1729,24 +1086,16 @@
       </Dialog>
     </TransitionRoot>
 
-    <div
-      aria-live="assertive"
-      class="pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start sm:p-6"
-    >
+    <div aria-live="assertive" class="pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start sm:p-6">
       <div class="flex w-full flex-col items-center space-y-4 sm:items-end">
         <!-- Notification panel, dynamically insert this into the live region when it needs to be displayed -->
-        <transition
-          enter-active-class="transform ease-out duration-300 transition"
+        <transition enter-active-class="transform ease-out duration-300 transition"
           enter-from-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
           enter-to-class="translate-y-0 opacity-100 sm:translate-x-0"
-          leave-active-class="transition ease-in duration-100"
-          leave-from-class="opacity-100"
-          leave-to-class="opacity-0"
-        >
-          <div
-            v-if="showStatusOverlay"
-            class="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5"
-          >
+          leave-active-class="transition ease-in duration-100" leave-from-class="opacity-100"
+          leave-to-class="opacity-0">
+          <div v-if="showStatusOverlay"
+            class="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div class="p-4">
               <div class="flex items-center">
                 <div class="flex w-0 flex-1 justify-between">
@@ -1755,11 +1104,8 @@
                   </p>
                 </div>
                 <div class="ml-4 flex flex-shrink-0">
-                  <button
-                    type="button"
-                    @click="showStatusOverlay = false"
-                    class="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                  >
+                  <button type="button" @click="showStatusOverlay = false"
+                    class="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                     <span class="sr-only">Close</span>
                     <XMarkIcon class="h-5 w-5" aria-hidden="true" />
                   </button>
@@ -1770,7 +1116,7 @@
         </transition>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script setup lang="ts">
@@ -1779,6 +1125,7 @@ import { XMarkIcon } from "@heroicons/vue/20/solid";
 import Paseo from "@/assets/img/paseo-logo.svg";
 import Polkadot from "@/assets/img/polkadot-logo.svg";
 import USDC from "@/assets/img/usdc-logo.svg";
+import TEER from "@/assets/img/logo-icon.svg";
 
 import { useAccount } from "@/store/account.ts";
 import { useIncognitee } from "@/store/incognitee.ts";
@@ -1919,11 +1266,10 @@ const txResHandlerPaseo = ({ events = [], status, txHash }) => {
             bnFromHex(mod.error.toHex().slice(0, 4)).toNumber(),
           ]),
         );
-        const message = `${error.section}.${error.name}${
-          Array.isArray(error.docs)
+        const message = `${error.section}.${error.name}${Array.isArray(error.docs)
             ? `(${error.docs.join("")})`
             : error.docs || ""
-        }`;
+          }`;
 
         errorInfo = `${message}`;
         console.log(`Error-info::${JSON.stringify(error)}`);
@@ -1975,8 +1321,7 @@ const unshield = () => {
   const amount = Math.pow(10, 10) * unshieldAmount.value;
   const account = accountStore.account;
   console.log(
-    `sending ${formatBalance(amount)} from ${
-      accountStore.getAddress
+    `sending ${formatBalance(amount)} from ${accountStore.getAddress
     } privately to ${recipientAddress.value} on L1 (shard: ${incogniteeStore.shard}`,
   );
 
@@ -2470,11 +1815,16 @@ const formatTimestamp = (timestamp: number | null) => {
 }
 
 h1 {
-  font-size: 1em; /* Adjust as needed */
-  font-weight: bold; /* Makes the text bold */
-  color: #999; /* Change color as needed */
-  text-align: center; /* Centers the text */
-  margin-bottom: 20px; /* Adds space below the heading */
+  font-size: 1em;
+  /* Adjust as needed */
+  font-weight: bold;
+  /* Makes the text bold */
+  color: #999;
+  /* Change color as needed */
+  text-align: center;
+  /* Centers the text */
+  margin-bottom: 20px;
+  /* Adds space below the heading */
 }
 
 .currency-selector {
@@ -2484,8 +1834,10 @@ h1 {
 }
 
 .currency-logo {
-  height: 50px; /* Adjust as needed */
-  width: 50px; /* Adjust as needed */
+  height: 50px;
+  /* Adjust as needed */
+  width: 50px;
+  /* Adjust as needed */
 }
 
 .buttons {
@@ -2496,10 +1848,14 @@ h1 {
 
 hr {
   border: none;
-  border-top: 1px #222; /* Change color as needed */
-  color: #111; /* Change color as needed */
-  background-color: #333; /* Change color as needed */
-  height: 1px; /* Adjust as needed */
+  border-top: 1px #222;
+  /* Change color as needed */
+  color: #111;
+  /* Change color as needed */
+  background-color: #333;
+  /* Change color as needed */
+  height: 1px;
+  /* Adjust as needed */
 }
 
 .privacy-separator {
@@ -2590,13 +1946,17 @@ hr {
 
 .form-container input {
   background-color: #333;
-  color: #fff; /* You might want to change the text color to ensure it's readable against the dark background */
+  color: #fff;
+  /* You might want to change the text color to ensure it's readable against the dark background */
 }
 
 .form-container input#amount {
-  font-size: 2em; /* Make the font size twice as large */
-  text-align: center; /* Center the text */
-  width: 50%; /* Reduce the width by 50% */
+  font-size: 2em;
+  /* Make the font size twice as large */
+  text-align: center;
+  /* Center the text */
+  width: 50%;
+  /* Reduce the width by 50% */
 }
 
 .incognitee-border-gradient {
@@ -2605,21 +1965,37 @@ hr {
   background: url("/img/global/bg-line.svg") no-repeat center center;
   background-size: cover;
 }
+.incognitee-bg {
+  background: linear-gradient(84.58deg, #24ad7c, #1845b9);
+}
 
+.incognitee-blue {
+  background: #1845b9;
+}
+
+.incognitee-green {
+  background: #24ad7c;
+}
 .spinner {
-  border: 2px solid #f3f3f3; /* Light grey */
-  border-top: 2px solid #3498db; /* Blue */
+  border: 2px solid #f3f3f3;
+  /* Light grey */
+  border-top: 2px solid #3498db;
+  /* Blue */
   border-radius: 50%;
-  width: 1em; /* Adjust the size here */
-  height: 1em; /* Adjust the size here */
+  width: 1em;
+  /* Adjust the size here */
+  height: 1em;
+  /* Adjust the size here */
   animation: spin 2s linear infinite;
-  vertical-align: middle; /* Align with the text */
+  vertical-align: middle;
+  /* Align with the text */
 }
 
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
