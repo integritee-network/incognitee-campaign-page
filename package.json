@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@encointer/util": "^0.15.0",
-    "@encointer/worker-api": "^0.15.1-alpha.0",
+    "@encointer/worker-api": "^0.15.1-alpha.1",
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@headlessui/vue": "^1.7.22",
     "@heroicons/vue": "^2.1.3",
